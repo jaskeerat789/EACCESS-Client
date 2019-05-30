@@ -1,6 +1,8 @@
 import requests
 import time
 import math
+import sys
+
 
 class EACESS():
 
@@ -48,6 +50,21 @@ class EACESS():
         r=requests.post("https://172.31.1.6:8090/logout.xml",data=logoutData,verify=False,headers=EACESS.header)
         print(r.text)
 
-obj=EACESS()
-obj.login("username","password")      #pass your credentials in place of username(integer) and "password"
-obj.logout()
+def main():
+
+    session = EACESS()
+    if len(sys.argv) < 2:
+        try:
+            session.login("username","password")      # Hardcode your credentials in place of "username"(integer) and "password" if don't want to use CLI
+            session.logout()
+        except:
+            print('An Error Occured')
+
+    else:
+        username = sys.argv[1]
+        password = sys.argv[2]
+        try:
+            obj.login(username, password)      
+            obj.logout()
+        except:
+            print('An Error Occured')
