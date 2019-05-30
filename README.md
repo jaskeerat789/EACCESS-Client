@@ -3,4 +3,10 @@ Update your username and password in the file and run the the file using the fol
 
 `python app.py`
 
+To use this using CLI, run the following command along with your username and password
+
+`python app.py username password`
+
+To logout, simply exit the application using `ctrl + C`
+
 Remember to comment out the login/logout function call as per desired action.
