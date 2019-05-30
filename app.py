@@ -61,7 +61,7 @@ else:
     username = sys.argv[1]
     password = sys.argv[2]
     try:
-        obj.login(username, password)      
+        session.login(username, password)      
     except:
         print('An Error Occured')
         
