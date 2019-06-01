@@ -8,3 +8,7 @@ To use this using CLI, run the following command along with your username and pa
 `python app.py username password`
 
 To logout, simply exit the application using `ctrl + C`
+
+To run the GUI type the following command
+
+`python GIU.py`
