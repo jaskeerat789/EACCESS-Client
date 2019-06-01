@@ -1,0 +1,2 @@
+Fri May 31 11:48:46 2019HTTPSConnectionPool(host='172.31.1.6', port=8090): Max retries exceeded with url: /login.xml (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))
+Fri May 31 11:53:43 2019: HTTPSConnectionPool(host='172.31.1.6', port=8090): Max retries exceeded with url: /login.xml (Caused by SSLError("Can't connect to HTTPS URL because the SSL module is not available."))

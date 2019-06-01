@@ -2,8 +2,7 @@ import requests
 import time
 import math
 import sys
-import atexit
-    
+
 class EACESS():
 
     username=None
@@ -50,27 +49,6 @@ class EACESS():
         r=requests.post("https://172.31.1.6:8090/logout.xml",data=logoutData,verify=False,headers=EACESS.header)
         print(r.text)
 
-session = EACESS()
 
-if len(sys.argv) < 2:
-    try:
-        session.login("username","password")      # Hardcode your credentials in place of "username"(integer) and "password" if don't want to use CLI
-    except:
-        print('An Error Occured')
-else:
-    username = sys.argv[1]
-    password = sys.argv[2]
-    try:
-        session.login(username, password)      
-    except:
-        print('An Error Occured')
-        
-@atexit.register
-def exit_handler():
-    global session
-    session.logout()
-
-while True:
-    pass
 
 
